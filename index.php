@@ -17,7 +17,9 @@
 get_header(); ?>
 
     <main id="content" class="content column-full" role="main">
-        <?php $posts = get_posts( 'posts_per_page=11' ); $i = 0;
+        <?php $paged = isset($_GET['paged']) ? (int)$_GET['paged'] : 0; ?>
+        <?php $paged = (get_query_var('paged')) ? (get_query_var('paged') - 1 ) * 11 + 1 : 1; ?>
+        <?php $posts = get_posts( 'posts_per_page=11&offset=' . $paged ); $i = 0;
         foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php if ($i === 2): ?>
                 <div id="superbanner" class="space-bottom-big clear">
