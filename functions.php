@@ -168,4 +168,19 @@ function parent_comment( $comment, $args, $depth ) {
     endswitch;
 }
 endif;
+
+
+/**
+ * Shortcodes.
+ *
+ * @since pw 0.0.1
+ */
+function sourcecode ($atts, $content = null) {
+  extract( shortcode_atts( array(
+      'language' => ''
+  ), $atts ));
+
+  return '<pre class="'.$language.'">'.$content.'</pre>';
+}
+add_shortcode('sourcecode', 'sourcecode');
 ?>
