@@ -13,11 +13,12 @@
 
 <footer id="footer" class="clear white-links" role="contentinfo">
     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" id="footer-logo" class="column-sixth content" />
-   
+
     <?php wp_nav_menu(); ?>
 </footer><!-- /footer -->
 <?php wp_footer(); ?>
 
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascript/prettify.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascript/all.js?ver=3.4.1"></script>
 </body>
 </html>
