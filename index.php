@@ -20,7 +20,9 @@ get_header(); ?>
         <?php $posts = get_posts( 'posts_per_page=11' ); $i = 0;
         foreach ( $posts as $post ) : setup_postdata( $post ); ?>
             <?php if ($i === 2): ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/adsense-full.png" alt="" id="adsense-full" class="space-bottom-big clear" />
+                <div id="superbanner" class="space-bottom-big clear">
+                    <a href="http://www.hostphd.com.br" title="Host PHD" rel="external"><img src="http://www.hostphd.com.br/bhphd.gif" alt="Host PHD" title="Host PHD" /></a>
+                </div>
             <?php endif; ?>
             <?php if ($i < 2): ?>
                 <?php get_template_part( 'content', 'featured' ); ?>

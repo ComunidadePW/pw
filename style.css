@@ -90,13 +90,19 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
 .post ul { margin-bottom: 30px; }
 .bullet li { list-style: disc; }
 
+/* Advertising */
+#superbanner {
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 728px
+}
 
 /* main */
 #main {
     background: #fff;
     min-height: 700px;
 }
-* html #main { min-height: 700px; }
 #header {
     height: 235px;
     margin-bottom: 25px;
@@ -109,7 +115,6 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
     .post:nth-child(3n+1) { clear: both; }
 
 .post img { max-width: 800px; height: auto !important; }
-.post-content {}
 .post-category {
     color: #fff;
     padding: 3px 15px 3px 5px;
