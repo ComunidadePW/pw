@@ -53,13 +53,12 @@ function custom_excerpt_length($length) {
 add_filter('excerpt_length', 'custom_excerpt_length');
 
 /**
- * lw_date
+ * Function to manipulate dates
  */
-function lw_date() {
+function pw_date() {
     global $post;
     $ts = strtotime( $post->post_date );
-    return '<time datetime="'.get_the_time('Y-m-d').'" class="updated">'.get_the_time('d').' <span>'.get_the_time('M').' '.get_the_time('Y').'</span>
-    </time>'.PHP_EOL;
+    return '<time datetime="'.get_the_time('Y-m-d').'" class="updated">'.get_the_time('d').' de <span>'.get_the_time('F').' de '.get_the_time('Y').'</span></time>'.PHP_EOL;
 }
 /**
  * overwrite comments_popup_link
@@ -81,7 +80,7 @@ function new_wp_list_categories($more) {
     $li = '';
     foreach($categories as $category)
     {
-        $li.= '<li><a href="'.get_category_link( $category->term_id ).'" title="'.$category->name.' '.$category->description.'">'.$category->name.'</a> ( '.$category->count.' )</li> ';
+        $li.= '<li><a href="'.get_category_link( $category->term_id ).'" title="'.$category->name.' '.$category->description.'">'.$category->name.'</a></li> ';
     }
     return $li;
 }

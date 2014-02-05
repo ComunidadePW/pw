@@ -12,9 +12,9 @@
 <article <?php post_class('fleft column-two-thirds') ?> id="post-<?php the_ID(); ?>" itemscope itemtype="http://schema.org/Article" role="article">
 
     <header role="banner">
-        <span class="vcard author" itemprop="author" itemscope itemtype="http://schema.org/Person">por 
+        <span class="vcard author" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="fn" itemprop="name"><?php the_author_link(); ?></span>
-        </span> em <?php echo lw_date(); ?>
+        </span> em <?php echo pw_date(); ?>
 
         <figure class="post-figure">
             <span class="post-category" itemprop="articleSection"><?php the_category(', ') ?></span>
@@ -28,9 +28,6 @@
                 <?php the_title(); ?>
             </h1>
         </figure><!-- .post-figure -->
-
-
-        <small class="fright"><?php comments_popup_link('Nenhum coment&aacute;rio', '(1) coment&aacute;rio', '(%) coment&aacute;rios', 'comments'); ?></small>
     </header>
     <div class="post-content entry-content">
 
@@ -38,7 +35,6 @@
 
     </div><!-- .post-content -->
     <footer role="contentinfo">
-        <p><?php the_tags(); ?></p>
         <?php wp_link_pages(); ?>
         <?php edit_post_link(__('Editar', 'pw')); ?>
     </footer>
