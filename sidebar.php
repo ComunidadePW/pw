@@ -10,14 +10,8 @@
  */
 ?>
     <aside id="sidebar" class="fright column-third no-right" role="complementary">
+        <h2>Categorias</h2>
         <ul>
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-            <li>
-                <h2>Categorias</h2>
-                <ul>
-                <?php wp_list_categories('sort_column=name&title_li='); ?>
-                </ul>
-            </li>
-            <?php endif; ?>
+            <?php wp_list_categories('sort_column=name&title_li='); ?>
         </ul>
     </aside><!-- #sidebar -->
