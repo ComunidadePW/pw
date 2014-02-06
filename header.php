@@ -54,6 +54,14 @@
 <body <?php body_class(); ?> role="document">
 <header id="header" class="column-full content" role="banner">
     <nav id="header-nav">
+        <ul id="header-nav-social">
+            <li><a href="http://feeds2.feedburner.com/pinceladasdaweb" title="RSS Pinceladas da Web">rss</a></li>
+            <li><a href="https://www.facebook.com/pinceladasdaweb" title="Facebook Pinceladas da Web">facebok</a></li>
+            <li><a href="https://twitter.com/pinceladasdaweb" title="Twitter Pinceladas da Web">twitter</a></li>
+            <li><a href="https://github.com/pinceladasdaweb" title="Github Pinceladas da Web">github</a></li>
+        </ul><!-- #header-nav-social -->
+        
+        <?php wp_nav_menu(); ?>
 
     </nav><!-- #header-nav -->
     <?php if (is_home()): ?>
