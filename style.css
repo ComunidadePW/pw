@@ -113,10 +113,30 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
 #logo { display: block; }
 #content { padding-bottom: 50px; }
 
-#header-nav .menu { }
-#header-nav .menu li { float: left; }
+#header-nav .menu { height: 45px; line-height: 45px; float: left; }
+#header-nav .menu li { float: left; text-transform: uppercase; margin-right: 20px; }
+#header-nav a { text-decoration: none; }
+#header-nav a:hover { text-decoration: underline; }
 
+#header-menu-label {
+    text-transform: uppercase;
+    color: #242324;
+    height: 45px; line-height: 45px;
+    padding: 0 13px 0 50px;
+    position: relative;
+}
+#header-menu-label:before {
+    display: block;
+    position: absolute; left: 20px; top: 5px;
+    width: 20px; height: 27px;
+    content: "";
+    background: url("images/sprite-social.png") no-repeat -200px top;
+}
 #header-search { height: 45px; background: #f0f; }
+
+#header-menu .menu { display: none; }
+.is-opened #header-menu-label { background: #e7e9f5; }
+#header-menu.is-opened .menu { display: block; }
 
 /* social */
 #header-nav-social { margin-top: 3px; }

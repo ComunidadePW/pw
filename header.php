@@ -69,7 +69,10 @@
                 </fieldset>
             </form><!-- #header-search -->
 
-            <?php wp_nav_menu(); ?>
+            <div id="header-menu" class="fright">
+                <?php wp_nav_menu(); ?>
+                <a href="#wrap-header-menu" id="header-menu-label" class="fright">Menu</a>
+            </div><!-- #header-menu -->
         </div><!-- #wrap-header-menu -->
 
     </nav><!-- #header-nav -->

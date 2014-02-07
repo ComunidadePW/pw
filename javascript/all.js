@@ -4,7 +4,8 @@
 
     var $external = document.querySelectorAll('a[rel*="external"]'),
         $pre      = document.querySelectorAll('.post-content > pre'),
-        $menu     = document.getElementById('anchor-header-sidebar');
+        $menu     = document.getElementById('anchor-header-sidebar'),
+        $menuLabel = document.getElementById('header-menu-label');
 
     function loop($elements, cb) {
         var i = $elements.length;
@@ -14,13 +15,24 @@
         };
     };//loop
 
+    $menuLabel.addEventListener('click', function(e){
+        e.preventDefault();
+        var $parent = this.parentNode;
+
+        if ($parent.className.match(/is-opened/g)) {
+            $parent.classList.remove('is-opened');
+        } else {
+            $parent.classList.add('is-opened');
+        }
+    });
+
     /* a rel="external" */
     loop($external, function ($element) {
-        $element.onclick = function () {
+        $element.addEventListener('click', function(e){
             window.open(this.href);
 
             return false;
-        };
+        });
     });
 
     // Sintax Highlight do Google Prettify
