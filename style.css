@@ -290,12 +290,12 @@ label.submit { display: inline; margin-right: 10px; }
     background: none;
 }
 
-/* responsivo */
+/* responsive grid */
 @media only screen and (max-width: 960px){
     .column-full { width: auto; padding: 0 20px; }
     .column-full .column-full { padding: 0; }
 
-    .column-half { width: 50%; }
+    .column-half { width: 50%; margin-right: 0; }
     .column-third { width: 30%; }
     .column-quarter { width: 21%; }
     .column-sixth { width: 12.5%; }
@@ -328,10 +328,12 @@ label.submit { display: inline; margin-right: 10px; }
     .column-half { width: auto; float: none; }
 }
 
+/* responsive blog */
 @media only screen and (max-width: 940px) {
-    img { max-width: 100% !important; height: auto !important; }
-
     .textarea span { height: auto; line-height: 1.4em; }
+}
+@media only screen and (max-width: 740px){
+    #superbanner { max-width: 100%; }
 }
 @media only screen and (max-width: 600px) {
     body { font-size: 12px; }
