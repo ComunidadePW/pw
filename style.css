@@ -51,6 +51,8 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
 .fright { float: right; }
 .clear { clear: both; }
 
+.hidden-text { overflow: hidden; text-indent: 100%; white-space: nowrap; }
+
 .white-links a { color: #fff; }
 .white-links a:hover { color: #296e6c; }
 
@@ -110,6 +112,25 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
 #header-nav { height: 45px; }
 #logo { display: block; }
 #content { padding-bottom: 50px; }
+
+#header-nav .menu { float: right; }
+#header-nav .menu li { float: left; }
+
+/* social */
+#header-nav-social { margin-top: 3px; }
+.social-item { 
+    background: url('images/sprite-social.jpg');
+    margin-right: 9px;
+}
+.social-item a { display: block; width: 37px; height: 37px; } 
+.social-item:hover { opacity: 0.9; }
+
+.social-item-2 { background-position: -52px top; }
+.social-item-3 { background-position: -103px top; }
+.social-item-4 { background-position: -153px top; margin-right: 0; }
+
+
+/* post */
 
 .post { position: relative; margin-bottom: 20px; }
     .post:nth-child(3n+1) { clear: both; }
