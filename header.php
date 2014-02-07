@@ -63,7 +63,7 @@
         
 
         <div id="wrap-header-menu" class="fright">
-            <form action="" method="get" id="header-search" class="fleft">
+            <form action="<?php echo home_url(); ?>" method="get" id="header-search" class="fleft">
                 <fieldset>
                     Busca
                 </fieldset>
