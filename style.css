@@ -113,13 +113,15 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
 #logo { display: block; }
 #content { padding-bottom: 50px; }
 
-#header-nav .menu { float: right; }
+#header-nav .menu { }
 #header-nav .menu li { float: left; }
+
+#header-search { height: 45px; background: #f0f; }
 
 /* social */
 #header-nav-social { margin-top: 3px; }
 .social-item { 
-    background: url('images/sprite-social.jpg');
+    background: url('images/sprite-social.png');
     margin-right: 9px;
 }
 .social-item a { display: block; width: 37px; height: 37px; } 
@@ -179,6 +181,7 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
 }
 #footer-logo { margin-bottom: 10px; display: block; }
 #footer .menu { width: 400px; margin: 0 auto; }
+#footer .menu li { float: left; margin-right: 15px; }
 
 #wpstats { display: none; }
 

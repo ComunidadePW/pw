@@ -61,13 +61,22 @@
             <li class="fleft social-item social-item-4 hidden-text"><a href="https://github.com/pinceladasdaweb" title="Github Pinceladas da Web">github</a></li>
         </ul><!-- #header-nav-social -->
         
-        <?php wp_nav_menu(); ?>
+
+        <div id="wrap-header-menu" class="fright">
+            <form action="" method="get" id="header-search" class="fleft">
+                <fieldset>
+                    Busca
+                </fieldset>
+            </form><!-- #header-search -->
+
+            <?php wp_nav_menu(); ?>
+        </div><!-- #wrap-header-menu -->
 
     </nav><!-- #header-nav -->
     <?php if (is_home()): ?>
         <h1 id="logo" class="column-quarter content">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-        </h1>
+        </h1><!-- #logo -->
     <?php else: ?>
         <a href="<?php echo home_url(); ?>" id="logo" class="column-quarter content">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
