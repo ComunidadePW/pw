@@ -1,0 +1,15 @@
+{
+  "name": "pw",
+  "version": "0.0.3",
+  "title": "Pinceladas da Web",
+  "homepage": "http://www.pinceladasdaweb.com.br/blog",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-cssmin": "~0.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/comunidadepw/pw"
+  }
+}

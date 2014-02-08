@@ -18,7 +18,6 @@
 </footer><!-- /footer -->
 <?php wp_footer(); ?>
 
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascript/prettify.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascript/all.js"></script>
 </body>
 </html>
