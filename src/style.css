@@ -111,6 +111,8 @@ pre code { background: transparent; padding: 0; }
 }
 #header-nav { height: 45px; }
 #logo { display: block; }
+#footer-logo:hover,
+a#logo img:hover { background: #0e0e0e; }
 #content { padding-bottom: 50px; }
 
 #header-nav .menu { height: 45px; line-height: 45px; float: left; }
