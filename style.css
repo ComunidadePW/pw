@@ -188,6 +188,18 @@ pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
 .archive header,
 .archive footer { border: none; }
 
+.content-page-buttons a {
+    font-size: 0.9em;
+    background: #46b4b1;
+    display: inline-block;
+    padding: 13px 23px 10px;
+    border-bottom: 10px solid #4c9e9b;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+    .content-page-buttons a:hover { text-decoration: underline; opacity: 0.9; }
+
 
 
 #comments { margin-top: 20px; }

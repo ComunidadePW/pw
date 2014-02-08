@@ -3,9 +3,11 @@
     'use strict';
 
     var $external = document.querySelectorAll('a[rel*="external"]'),
-        $pre      = document.querySelectorAll('.post-content > pre'),
-        $menu     = document.getElementById('anchor-header-sidebar'),
-        $menuLabel = document.getElementById('header-menu-label');
+        $pre = document.querySelectorAll('.post-content > pre'),
+        $menu = document.getElementById('anchor-header-sidebar'),
+        $headerMenu = document.getElementById('wrap-header-menu'),
+        $menuLabel = document.getElementById('header-menu-label'),
+        $searchLabel = document.getElementById('header-search-label');
 
     function loop($elements, cb) {
         var i = $elements.length;
@@ -13,27 +15,22 @@
         while (i--) {
             cb($elements[i]);
         };
-    };//loop
-
-    $menuLabel.addEventListener('click', function(e){
+    }
+    
+    function openHeaderAction(e) {
         e.preventDefault();
-        var $parent = this.parentNode.parentNode;
+        var $parent = $headerMenu;
 
         if ($parent.className.match(/is-opened/g)) {
             $parent.classList.remove('is-opened');
         } else {
             $parent.classList.add('is-opened');
         }
-    });
+    }
 
-    /* a rel="external" */
-    loop($external, function ($element) {
-        $element.addEventListener('click', function(e){
-            window.open(this.href);
+    $menuLabel.addEventListener('click', openHeaderAction);
+    $searchLabel.addEventListener('click', openHeaderAction);
 
-            return false;
-        });
-    });
 
     // Sintax Highlight do Google Prettify
     loop($pre, function ($element) {

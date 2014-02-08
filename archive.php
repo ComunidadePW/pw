@@ -32,9 +32,9 @@ get_header(); ?>
 
         <?php endif; ?>
 
-        <div class="clear">
-            <?php posts_nav_link(' &#8212; ', __('&laquo; Anterior', 'pw'), __('Pr&oacute;xima &raquo;', 'pw')); ?>
-        </div>
+        <div class="clear content-page-buttons">
+            <?php posts_nav_link(' ', __('Posts mais antigos', 'pw'), __('Mostrar mais posts', 'pw')); ?>
+        </div><!-- .content-page-buttons -->
 
     </main><!-- #content -->
 <?php get_footer(); ?>
