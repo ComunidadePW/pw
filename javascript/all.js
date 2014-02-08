@@ -1,4 +1,4 @@
-(function() {
+(function(window, document, undefined) {
     /*global jQuery: false*/
     'use strict';
 
@@ -7,7 +7,8 @@
         $menu = document.getElementById('anchor-header-sidebar'),
         $headerMenu = document.getElementById('wrap-header-menu'),
         $menuLabel = document.getElementById('header-menu-label'),
-        $searchLabel = document.getElementById('header-search-label');
+        $searchLabel = document.getElementById('header-search-label'),
+        $searchInput = document.getElementById('header-search-input');
 
     function loop($elements, cb) {
         var i = $elements.length;
@@ -19,17 +20,21 @@
     
     function openHeaderAction(e) {
         e.preventDefault();
-        var $parent = $headerMenu;
+        var action = this.getAttribute('data-action');
 
-        if ($parent.className.match(/is-opened/g)) {
-            $parent.classList.remove('is-opened');
+        if ($headerMenu.className.match(/is-opened/g) === null) {
+            $headerMenu.classList.add('is-opened-' + action);
         } else {
-            $parent.classList.add('is-opened');
+            $headerMenu.classList.remove('is-opened-menu');
+            $headerMenu.classList.remove('is-opened-search');
         }
     }
 
     $menuLabel.addEventListener('click', openHeaderAction);
     $searchLabel.addEventListener('click', openHeaderAction);
+    $searchLabel.addEventListener('click', function () {
+        $searchInput.focus();
+    });
 
 
     // Sintax Highlight do Google Prettify
@@ -39,4 +44,4 @@
     });
     prettyPrint();
 
-}());//function
+}(document, document, undefined));//function

@@ -63,15 +63,19 @@
         
 
         <div id="wrap-header-menu" class="fright">
-            <form action="<?php echo home_url(); ?>" method="get" id="header-search" class="fleft">
-                <fieldset>
-                    <a href="#wrap-header-menu" id="header-search-label" class="header-action-label">Busca</a>
+            <form action="<?php echo home_url(); ?>/" role="search" method="get" id="header-search" class="fleft">
+                <fieldset class="header-search-inputs fleft">
+                    <label class="header-search-label fleft">
+                        <input type="text" name="s" id="header-search-input" size="20" value="<?php echo get_search_query(); ?>" />
+                    </label>
+                    <input type="submit" name="ok" value="ok" class="searchsubmit submit fleft" />
                 </fieldset>
+                <a href="#wrap-header-menu" data-action="search" id="header-search-label" class="header-action-label fright">Busca</a>
             </form><!-- #header-search -->
 
             <div id="header-menu" class="fright">
                 <?php wp_nav_menu(); ?>
-                <a href="#wrap-header-menu" id="header-menu-label" class="fright header-action-label">Menu</a>
+                <a href="#wrap-header-menu" data-action="menu" id="header-menu-label" class="fright header-action-label">Menu</a>
             </div><!-- #header-menu -->
         </div><!-- #wrap-header-menu -->
 
