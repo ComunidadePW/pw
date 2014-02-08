@@ -17,7 +17,7 @@
 
     $menuLabel.addEventListener('click', function(e){
         e.preventDefault();
-        var $parent = this.parentNode;
+        var $parent = this.parentNode.parentNode;
 
         if ($parent.className.match(/is-opened/g)) {
             $parent.classList.remove('is-opened');
@@ -42,4 +42,4 @@
     });
     prettyPrint();
 
-})();//function
+}());//function

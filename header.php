@@ -65,13 +65,13 @@
         <div id="wrap-header-menu" class="fright">
             <form action="<?php echo home_url(); ?>" method="get" id="header-search" class="fleft">
                 <fieldset>
-                    Busca
+                    <a href="#wrap-header-menu" id="header-search-label" class="header-action-label">Busca</a>
                 </fieldset>
             </form><!-- #header-search -->
 
             <div id="header-menu" class="fright">
                 <?php wp_nav_menu(); ?>
-                <a href="#wrap-header-menu" id="header-menu-label" class="fright">Menu</a>
+                <a href="#wrap-header-menu" id="header-menu-label" class="fright header-action-label">Menu</a>
             </div><!-- #header-menu -->
         </div><!-- #wrap-header-menu -->
 
