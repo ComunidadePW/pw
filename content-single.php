@@ -16,18 +16,16 @@
             <span class="fn" itemprop="name"><?php the_author_link(); ?></span>
         </span> em <?php echo pw_date(); ?>
 
-        <figure class="post-figure">
+        <figure class="post-figure space-bottom-small">
             <span class="post-category" itemprop="articleSection"><?php the_category(', ') ?></span>
             <?php if ( !has_post_thumbnail() ): ?>
                  <img src="<?php echo get_template_directory_uri(); ?>/images/img-post-default.png" alt="<?php the_title(); ?>" />
             <?php else: ?>
                 <?php the_post_thumbnail(); ?>
             <?php endif; ?>
-
-            <h1 class="entry-title" role="heading" aria-level="1" itemprop="name">
-                <?php the_title(); ?>
-            </h1>
         </figure><!-- .post-figure -->
+        
+        <h1 class="entry-title" role="heading" aria-level="1" itemprop="name"><?php the_title(); ?></h1>
     </header>
     <div class="post-content entry-content">
 

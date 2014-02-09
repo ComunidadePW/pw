@@ -76,6 +76,7 @@ pre code { background: transparent; padding: 0; }
 .space-left { margin-left: 20px; }
 .space-right { margin-right: 20px; }
 
+.space-bottom-small {margin-bottom:10px}
 .space-bottom { margin-bottom: 20px; }
 .space-bottom-big { margin-bottom: 40px; }
 
@@ -190,21 +191,23 @@ a#logo img:hover { background: #0e0e0e; }
     padding: 3px 15px 3px 5px;
     background: #45b3b0;
     position: absolute;
-    left: -2px;
+    left: 0;
     top: 10px;
 }
+
+.single-post .post-category {top: 20px}
+
     .post-category a { color: #fff; }
     .post-category a:hover { color: #296e6c; }
 
 .post header {
     margin-bottom: 15px;
 }
-.post-figure { position: relative; }
-.autor { clear: left; }
+.post-figure { position: relative; padding-top: 10px }
 
-.post time {}
-.post time span {}
-
+.post header .space-bottom-small {
+    display: block;
+}
 
 .archive header,
 .archive footer { border: none; }
