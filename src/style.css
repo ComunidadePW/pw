@@ -420,7 +420,8 @@ input, select, textarea {
     .textarea span { height: auto; line-height: 1.4em; }
 }
 @media only screen and (max-width: 920px){
-    #sidebar { float: none; clear: both; }
+    #sidebar { float: none; clear: both; width: auto; overflow: hidden; }
+    .categories li { width: 33%; float: left; }
 }
 @media only screen and (max-width: 740px){
     #superbanner { max-width: 100%; }
@@ -454,6 +455,8 @@ input, select, textarea {
     .wp-post-image { display: none; }
 }
 @media only screen and (max-width: 480px) {
+    .categories li { width: 50%; }
+
     pre { font-size: 8px; letter-spacing: -1px; }
     ol.linenums { margin-left: 15px; }
     input,
