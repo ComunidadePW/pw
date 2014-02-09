@@ -110,7 +110,7 @@ pre code { background: transparent; padding: 0; }
     margin-bottom: 25px;
 }
 #header-nav { height: 45px; }
-#logo { display: block; }
+#logo { display: block; text-align: center; }
 #footer-logo:hover,
 a#logo img:hover { background: #0e0e0e; }
 #content { padding-bottom: 50px; }
@@ -205,6 +205,13 @@ a#logo img:hover { background: #0e0e0e; }
 .post time {}
 .post time span {}
 
+.post-date { 
+    background: #45b3b0; color: #fff; 
+    padding: 20px 3px 5px; margin-right: 10px;
+    text-align: center;
+    display: none;
+}
+.post-footer-link { display: none; }
 
 .archive header,
 .archive footer { border: none; }
@@ -370,7 +377,7 @@ input, select, textarea {
 }
 @media only screen and (max-width: 660px){
     .column-two-thirds { width: 100%; float: none; }
-    .column-third { width: auto; float: none; margin: 0 auto; text-align: center; }
+    .column-third { width: auto; float: none; margin-left: auto; margin-right: auto; clear: both; }
     .column-quarter { width: 50%; margin-right: 0; }
     .column-sixth { width: 33.33%; margin-right: 0; }
 
@@ -391,13 +398,33 @@ input, select, textarea {
 @media only screen and (max-width: 740px){
     #superbanner { max-width: 100%; }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
     body { font-size: 12px; }
 
     label span.fleft { display: block; text-align: left; width: 100%; }
     label small { float: left; }
 
     .searchform input { width: 80%; }
+    #footer-logo,
+    #logo { margin: 0 auto; }
+
+    .home .post header { margin-bottom: 0; }
+    .home .entry-title { font-size: 1.5em; letter-spacing: 0; margin-bottom: 2px; }
+    .home .post-category { display: none; }
+    .home .post-date { display: block; }
+
+    .home .post { padding-right: 40px; }
+
+    .post-footer { position: absolute; right: 10px; top: 15px; }
+    .post-footer-link {
+        font-size: 3em; font-weight: bold;
+        text-decoration: none;
+        display: block;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .home .post-category { position: static; }
+    .wp-post-image { display: none; }
 }
 @media only screen and (max-width: 480px) {
     pre { font-size: 8px; letter-spacing: -1px; }

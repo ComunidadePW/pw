@@ -14,7 +14,7 @@
         <span class="post-category" itemprop="articleSection"><?php the_category(', ') ?></span>
         <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
             <?php if ( !has_post_thumbnail() ): ?>
-                 <img src="<?php echo get_template_directory_uri(); ?>/images/img-post-default-460x190.png" alt="<?php the_title(); ?>" />
+                 <img src="<?php echo get_template_directory_uri(); ?>/images/img-post-default-460x190.png" alt="<?php the_title(); ?>" class="attachment-list-thumb wp-post-image" />
             <?php else: ?>
                 <?php the_post_thumbnail('featured-thumb'); ?>
             <?php endif; ?>

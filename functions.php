@@ -57,7 +57,6 @@ add_filter('excerpt_length', 'custom_excerpt_length');
  */
 function pw_date() {
     global $post;
-    $ts = strtotime( $post->post_date );
     return '<time datetime="'.get_the_time('Y-m-d').'" class="updated">'.get_the_time('d').' de <span>'.get_the_time('F').' de '.get_the_time('Y').'</span></time>'.PHP_EOL;
 }
 /**
