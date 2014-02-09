@@ -76,6 +76,7 @@ pre code { background: transparent; padding: 0; }
 
 .space-left { margin-left: 20px; }
 .space-right { margin-right: 20px; }
+.space-right-small {margin-right: 10px;}
 
 .space-bottom-small {margin-bottom:10px}
 .space-bottom { margin-bottom: 20px; }
@@ -113,7 +114,6 @@ pre code { background: transparent; padding: 0; }
 }
 #header-nav { height: 45px; }
 #logo { display: block; text-align: center; }
-#footer-logo:hover,
 a#logo img:hover { background: #0e0e0e; }
 #content { padding-bottom: 50px; }
 
@@ -216,7 +216,8 @@ a#logo img:hover { background: #0e0e0e; }
 .post-footer-link { display: none; }
 .post header .space-bottom-small { display: block; }
 
-.post-authorbox-info { text-align: right; background: #45b3b0; color: #fff; padding-bottom: 7px; }
+.post-authorbox-info { text-align: right; background: #45b3b0; color: #fff; padding: 7px 0; }
+.post-authorbox-info a {color: #2B2B2B;}
 .post-authorbox-info-name { margin-bottom: 0; }
 .post-authorbox-info-bio { font-size: 0.9em; margin-bottom: 0; }
 .post-authorbox-img img { border-radius: 50%; margin-top: -25px; }
@@ -273,8 +274,9 @@ a#logo img:hover { background: #0e0e0e; }
     background: url("images/bg-footer.jpg") repeat-x center top;
 }
 #footer-logo { margin-bottom: 10px; display: block; }
-#footer .menu { width: 400px; margin: 0 auto; text-align: center; }
-#footer .menu li { display: inline-block; margin-right: 15px; }
+#footer .menu { margin: 0 auto; text-align: center; }
+#footer .menu li { display: inline-block; margin-left: 20px; }
+#footer .menu li:first-child {margin-left: 0}
 
 #wpstats { display: none; }
 

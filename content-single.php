@@ -27,7 +27,7 @@
         
         <h1 class="entry-title" role="heading" aria-level="1" itemprop="name"><?php the_title(); ?></h1>
     </header>
-    <div class="post-content entry-content">
+    <div class="post-content entry-content space-bottom">
 
         <?php the_content('Leia &raquo; ' . get_the_title() ); ?>
 
@@ -48,9 +48,9 @@
         <div class="post-share overflow">
             <p class="post-footer-title"><b>Gostou? Compartilhe!</b></p>
             <ul class="overflow">
-                <li class="fleft space-right"><div class="g-plusone" data-size="tall" data-href="<?php the_permalink() ?>"></div></li>
-                <li class="fleft space-right"><div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-layout="box_count" data-width="140" data-show-faces="false"></div></li>
-                <li class="fleft space-right"><script type="IN/Share" data-url="<?php the_permalink() ?>" data-counter="top"></script></li>
+                <li class="fleft space-right-small"><div class="g-plusone" data-size="tall" data-href="<?php the_permalink() ?>"></div></li>
+                <li class="fleft space-right-small"><div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-layout="box_count" data-width="140" data-show-faces="false"></div></li>
+                <li class="fleft space-right-small"><script type="IN/Share" data-url="<?php the_permalink() ?>" data-counter="top"></script></li>
                 <li class="fleft"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>">Tweet</a></li>
             </ul>
         </div><!-- .post-share -->
