@@ -247,8 +247,8 @@ a#logo img:hover { background: #0e0e0e; }
     background: url("images/bg-footer.jpg") repeat-x center top;
 }
 #footer-logo { margin-bottom: 10px; display: block; }
-#footer .menu { width: 400px; margin: 0 auto; }
-#footer .menu li { float: left; margin-right: 15px; }
+#footer .menu { width: 400px; margin: 0 auto; text-align: center; }
+#footer .menu li { display: inline-block; margin-right: 15px; }
 
 #wpstats { display: none; }
 
