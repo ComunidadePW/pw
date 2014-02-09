@@ -205,7 +205,7 @@ a#logo img:hover { background: #0e0e0e; }
 }
 .post-figure { position: relative; padding-top: 10px }
 
-<<<<<<< HEAD
+
 .post-date { 
     background: #45b3b0; color: #fff; 
     padding: 20px 3px 5px; margin-right: 10px;
@@ -213,11 +213,10 @@ a#logo img:hover { background: #0e0e0e; }
     display: none;
 }
 .post-footer-link { display: none; }
-=======
+
 .post header .space-bottom-small {
     display: block;
 }
->>>>>>> f5c832e7489f3b425a42d7c324e38a27ec3ed72e
 
 .archive header,
 .archive footer { border: none; }
