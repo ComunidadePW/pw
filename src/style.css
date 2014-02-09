@@ -251,6 +251,11 @@ a#logo img:hover { background: #0e0e0e; }
     margin-bottom: 3px
 }
 
+#sidebar .banner-sky {
+    height: 600px;
+    width: 120px
+}
+
 /* Content page buttons */
 .content-page-buttons {
     background: url('images/bg-page-buttons.png') no-repeat center top;
