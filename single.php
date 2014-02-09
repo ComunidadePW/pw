@@ -15,6 +15,10 @@
             <?php get_template_part( 'content', 'single' ); ?>
             <?php get_sidebar(); ?>
 
+            <div id="related" class="fleft column-two-thirds">
+                <p class="related-title"><b>Leia também:</b></p>
+            </div>
+
             <?php comments_template('', true); ?>
 
         <?php endwhile; else: ?>

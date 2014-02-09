@@ -220,6 +220,8 @@ a#logo img:hover { background: #0e0e0e; }
 .post-authorbox-info-bio { font-size: 0.9em; margin-bottom: 0; }
 .post-authorbox-img img { border-radius: 50%; margin-top: -25px; }
 
+.post-footer-title {color: #525252; font-size: 16px}
+
 .archive header,
 .archive footer { border: none; }
 
@@ -234,6 +236,9 @@ a#logo img:hover { background: #0e0e0e; }
     text-decoration: none;
 }
     .content-page-buttons a:hover { text-decoration: underline; opacity: 0.9; }
+
+/* Posts Relacionados */
+.related-title {color: #525252; font-size: 16px}
 
 /* Sidebar */
 #sidebar {
@@ -261,12 +266,18 @@ a#logo img:hover { background: #0e0e0e; }
     text-align: center;
 }
 
+
+/* Comments */
 #comments { margin-top: 20px; }
-#commentlist { margin-bottom: 20px; }
+.comments-title {color: #525252; font-size: 16px; font-weight: bold}
+.commentlist { margin-bottom: 20px; }
 .comment.even { background: #f9f9f9; }
     .comment { padding: 10px; list-style: none; }
 
 .children { margin-left: 25px; }
+
+
+#respond #reply-title {color: #525252; font-size: 16px; font-weight: bold}
 
 
 #footer {
