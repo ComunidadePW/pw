@@ -79,14 +79,14 @@
         </div><!-- #wrap-header-menu -->
 
     </nav><!-- #header-nav -->
-    <?php if (is_home()): ?>
-        <h1 id="logo" class="column-quarter content">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-        </h1><!-- #logo -->
-    <?php else: ?>
+    <?php if (is_category() || is_tag() || is_month() || is_paged() || is_single()): ?>
         <a href="<?php echo home_url(); ?>" id="logo" class="column-quarter content">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
         </a>
+    <?php else: ?>
+        <h1 id="logo" class="column-quarter content">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+        </h1><!-- #logo -->
     <?php endif; ?>
 
 </header><!-- #header -->
