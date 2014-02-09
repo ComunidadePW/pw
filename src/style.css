@@ -181,7 +181,6 @@ a#logo img:hover { background: #0e0e0e; }
 
 
 /* post */
-
 .post { position: relative; margin-bottom: 20px; }
     .post:nth-child(3n+1) { clear: both; }
 
@@ -222,7 +221,12 @@ a#logo img:hover { background: #0e0e0e; }
 }
     .content-page-buttons a:hover { text-decoration: underline; opacity: 0.9; }
 
-
+/* Content page buttons */
+.content-page-buttons {
+    background: url('images/bg-page-buttons.png') no-repeat center top;
+    padding-top: 12px;
+    text-align: center;
+}
 
 #comments { margin-top: 20px; }
 #commentlist { margin-bottom: 20px; }
