@@ -2,10 +2,20 @@
 Theme Name: pw
 Description: Used to style the TinyMCE editor.
 */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body,
 input, select, textarea {
-    font-family: 'Open Sans', Tahoma, sans-serif;
+    font: 14px 'Open Sans', Tahoma, sans-serif;
+    color: #020202;
 }
-h1, h2, h3, h4, h5, h6 { font-weight: normal; color: #069; }
+
+h1, h2, h3, h4, h5, h6 { margin-bottom: 10px; font-weight: normal; letter-spacing: -0.02em; }
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 0.9em; font-weight: bold; }
+
 pre { background: #eee; padding: 10px; }
-img { max-width: 700px; height: auto; }
+img { max-width: 600px !important; height: auto !important; }
