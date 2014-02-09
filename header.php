@@ -40,6 +40,16 @@
         <link rel="canonical" href="<?php the_permalink(); ?>" />
     <?php } ?>
 
+    <link rel="dns-prefetch" href="//0.gravatar.com" />
+    <link rel="dns-prefetch" href="//img.submarino.com.br" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.facebook.com" />
+    <link rel="dns-prefetch" href="//p.twitter.com" />
+    <link rel="dns-prefetch" href="//plusone.google.com" />
+    <link rel="dns-prefetch" href="//apis.google.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//platform.linkedin.com" />
+
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -52,7 +62,7 @@
 </head>
 <body <?php body_class(); ?> role="document">
 <header id="header" class="column-full content" role="banner">
-    <nav id="header-nav">
+    <nav id="header-nav" role="navigation">
         <ul id="header-nav-social" class="fleft">
             <li class="fleft social-item social-item-1 hidden-text"><a href="http://feeds2.feedburner.com/pinceladasdaweb" title="RSS Pinceladas da Web">rss</a></li>
             <li class="fleft social-item social-item-2 hidden-text"><a href="https://www.facebook.com/pinceladasdaweb" title="Facebook Pinceladas da Web">facebok</a></li>
