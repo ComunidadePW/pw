@@ -4,11 +4,14 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
-            js: {
-                files: {
-                    'javascript/all.js': ['src/javascript/prettify.js', 'src/javascript/all.js']
-                }
+            options: {
+                banner: '/*Minified JavaScript of Pinceladas da Web */\n'
             },
+            my_target: {
+                files: {
+                    'javascript/all.min.js': ['src/javascript/social.js', 'src/javascript/prettify.js', 'src/javascript/all.js']
+                }
+            }
         },
         cssmin: {
             with_banner: {

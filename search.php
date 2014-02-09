@@ -16,9 +16,9 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-        <div class="fright">
-            <?php posts_nav_link(' &#8212; ', __('&laquo; Anterior', 'pw'), __('Pr&oacute;xima &raquo;', 'pw')); ?>
-        </div>
+        <div class="clear content-page-buttons">
+            <?php posts_nav_link(' ', __('Posts mais antigos', 'pw'), __('Mostrar mais posts', 'pw')); ?>
+        </div><!-- .content-page-buttons -->
 
         <?php else : ?>
             <article class="not-found">

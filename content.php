@@ -13,7 +13,7 @@
     <header role="banner">
         <time datetime="<?php echo get_the_time('Y-m-d'); ?>" class="updated fleft post-date"><?php echo get_the_time('d'); ?><br /><span><?php echo get_the_time('F'); ?></span></time>
         <span class="post-category" itemprop="articleSection"><?php the_category(', ') ?></span>
-        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+        <a class="space-bottom-small" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
             <?php if ( !has_post_thumbnail() ): ?>
                  <img src="<?php echo get_template_directory_uri(); ?>/images/img-post-default-300x125.png" alt="<?php the_title(); ?>" class="attachment-list-thumb wp-post-image" />
             <?php else: ?>
