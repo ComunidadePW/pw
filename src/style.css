@@ -442,7 +442,7 @@ input, select, textarea {
 
     .home .post { padding-right: 40px; }
 
-    .post-footer { position: absolute; right: 10px; top: 15px; }
+    .home .post-footer { position: absolute; right: 10px; top: 15px; }
     .post-footer-link {
         font-size: 3em; font-weight: bold;
         text-decoration: none;
