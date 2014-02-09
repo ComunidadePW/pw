@@ -22,7 +22,7 @@ body {
     min-width: 240px;
     background: url("images/bg-body.jpg") repeat-x center top;
 }
-h1, h2, h3, h4, h5, h6 { margin-bottom: 10px; font-weight: normal; letter-spacing: -2px; }
+h1, h2, h3, h4, h5, h6 { margin-bottom: 10px; font-weight: normal; letter-spacing: -0.02em; }
 h1 a, h2 a { color: #000; text-decoration: none; }
 h1 { font-size: 2.5em; }
 h2 { font-size: 2em; }
@@ -223,6 +223,20 @@ a#logo img:hover { background: #0e0e0e; }
     text-decoration: none;
 }
     .content-page-buttons a:hover { text-decoration: underline; opacity: 0.9; }
+
+/* Sidebar */
+#sidebar {
+    width: 250px
+}
+
+#sidebar .categories {
+    margin-bottom: 40px
+}
+
+
+#sidebar .categories li {
+    margin-bottom: 3px
+}
 
 /* Content page buttons */
 .content-page-buttons {
