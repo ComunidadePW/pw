@@ -214,10 +214,12 @@ a#logo img:hover { background: #0e0e0e; }
     display: none;
 }
 .post-footer-link { display: none; }
+.post header .space-bottom-small { display: block; }
 
-.post header .space-bottom-small {
-    display: block;
-}
+.post-authorbox-info { text-align: right; background: #45b3b0; color: #fff; padding-bottom: 7px; }
+.post-authorbox-info-name { margin-bottom: 0; }
+.post-authorbox-info-bio { font-size: 0.9em; margin-bottom: 0; }
+.post-authorbox-img img { border-radius: 50%; margin-top: -25px; }
 
 .archive header,
 .archive footer { border: none; }

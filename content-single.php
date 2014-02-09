@@ -33,26 +33,28 @@
 
     </div><!-- .post-content -->
 
-    <div class="post-authorbox overflow">
-        <h5>Escrito por:</h5>
-        <?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_meta('user_email'), '120'); }?>
-        <div class="post-authorbox-info">
-            <h3><?php the_author_meta('display_name'); ?></h3>
-            <p><?php the_author_meta('description'); ?></p>
-        </div>
-    </div><!-- .post-authorbox -->
+    <footer class="post-footer" role="contentinfo">
+        <div class="post-authorbox overflow">
+            <p class="post-footer-title"><b>Escrito por:</b></p>
+            <span class="post-authorbox-img fright space-left">
+                <?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_meta('user_email'), '120'); }?>
+            </span><!-- .post-authorbox-img -->
+            <div class="post-authorbox-info">
+                <h3 class="post-authorbox-info-name"><?php the_author_meta('display_name'); ?></h3>
+                <p class="post-authorbox-info-bio"><?php the_author_meta('description'); ?></p>
+            </div><!-- .post-authorbox-info -->
+        </div><!-- .post-authorbox -->
 
-    <div class="share overflow">
-        <h5>Gostou? Compartilhe!</h5>
-        <ul class="overflow">
-            <li class="fleft space-right"><div class="g-plusone" data-size="tall" data-href="<?php the_permalink() ?>"></div></li>
-            <li class="fleft space-right"><div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-layout="box_count" data-width="140" data-show-faces="false"></div></li>
-            <li class="fleft space-right"><script type="IN/Share" data-url="<?php the_permalink() ?>" data-counter="top"></script></li>
-            <li class="fleft"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>">Tweet</a></li>
-        </ul>
-    </div>
+        <div class="post-share overflow">
+            <p class="post-footer-title"><b>Gostou? Compartilhe!</b></p>
+            <ul class="overflow">
+                <li class="fleft space-right"><div class="g-plusone" data-size="tall" data-href="<?php the_permalink() ?>"></div></li>
+                <li class="fleft space-right"><div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-layout="box_count" data-width="140" data-show-faces="false"></div></li>
+                <li class="fleft space-right"><script type="IN/Share" data-url="<?php the_permalink() ?>" data-counter="top"></script></li>
+                <li class="fleft"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>">Tweet</a></li>
+            </ul>
+        </div><!-- .post-share -->
 
-    <footer role="contentinfo">
         <?php wp_link_pages(); ?>
         <?php edit_post_link(__('Editar', 'pw')); ?>
     </footer>
