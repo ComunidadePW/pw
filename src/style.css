@@ -53,6 +53,7 @@ pre code { background: transparent; padding: 0; }
 .clear { clear: both; }
 
 .hidden-text { overflow: hidden; text-indent: 100%; white-space: nowrap; }
+.overflow { overflow: hidden; }
 
 .white-links a { color: #fff; }
 .white-links a:hover { color: #296e6c; }
@@ -380,6 +381,8 @@ input, select, textarea {
     .column-quarter { width: 21%; }
     .column-sixth { width: 12.5%; }
 
+    .column-two-thirds { width: auto; }
+
     .column-third .column-sixth { width: 50%; }
 
     .column-one-twelfths { width: 12.5% }
@@ -413,6 +416,9 @@ input, select, textarea {
 /* responsive blog */
 @media only screen and (max-width: 940px) {
     .textarea span { height: auto; line-height: 1.4em; }
+}
+@media only screen and (max-width: 920px){
+    #sidebar { float: none; clear: both; }
 }
 @media only screen and (max-width: 740px){
     #superbanner { max-width: 100%; }

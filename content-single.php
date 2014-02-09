@@ -33,22 +33,22 @@
 
     </div><!-- .post-content -->
 
-    <div class="authorbox">
+    <div class="post-authorbox overflow">
         <h5>Escrito por:</h5>
         <?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_meta('user_email'), '120'); }?>
-        <div class="authorbox-info">
+        <div class="post-authorbox-info">
             <h3><?php the_author_meta('display_name'); ?></h3>
             <p><?php the_author_meta('description'); ?></p>
         </div>
-    </div>
+    </div><!-- .post-authorbox -->
 
-    <div class="share">
+    <div class="share overflow">
         <h5>Gostou? Compartilhe!</h5>
-        <ul>
-            <li><div class="g-plusone" data-size="tall" data-href="<?php the_permalink() ?>"></div></li>
-            <li><div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-layout="box_count" data-width="140" data-show-faces="false"></div></li>
-            <li><script type="IN/Share" data-url="<?php the_permalink() ?>" data-counter="top"></script></li>
-            <li><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>">Tweet</a></li>
+        <ul class="overflow">
+            <li class="fleft space-right"><div class="g-plusone" data-size="tall" data-href="<?php the_permalink() ?>"></div></li>
+            <li class="fleft space-right"><div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-layout="box_count" data-width="140" data-show-faces="false"></div></li>
+            <li class="fleft space-right"><script type="IN/Share" data-url="<?php the_permalink() ?>" data-counter="top"></script></li>
+            <li class="fleft"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>">Tweet</a></li>
         </ul>
     </div>
 
