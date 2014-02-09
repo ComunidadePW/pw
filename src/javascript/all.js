@@ -20,13 +20,14 @@
     
     function openHeaderAction(e) {
         e.preventDefault();
-        var action = this.getAttribute('data-action');
+        var action = this.getAttribute('data-action'),
+            re = new RegExp('is-opened-' + action, 'g');
 
-        if ($headerMenu.className.match(/is-opened/g) === null) {
+
+        if ($headerMenu.className.match(re) === null) {
             $headerMenu.classList.add('is-opened-' + action);
         } else {
-            $headerMenu.classList.remove('is-opened-menu');
-            $headerMenu.classList.remove('is-opened-search');
+            $headerMenu.classList.remove('is-opened-' + action);
         }
     }
 

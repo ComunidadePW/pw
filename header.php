@@ -90,7 +90,7 @@
 
     </nav><!-- #header-nav -->
     <?php if (is_category() || is_tag() || is_month() || is_paged() || is_page() || is_single()): ?>
-        <a href="<?php echo home_url(); ?>" id="logo" class="column-quarter content">
+        <a href="<?php echo home_url(); ?>" id="logo" class="column-quarter content" rel="index">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
         </a>
     <?php else: ?>

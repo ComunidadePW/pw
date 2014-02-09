@@ -148,10 +148,8 @@ a#logo img:hover { background: #0e0e0e; }
 
 .is-opened-menu #header-menu-label { background: #e7e9f5; }
 .is-opened-menu #header-menu .menu { display: block; }
-.is-opened-menu #header-search { display: none; }
 
 .is-opened-search .header-search-inputs { display: block; }
-.is-opened-search  #header-search-label { display: none; }
 
 
 .header-search-label {
