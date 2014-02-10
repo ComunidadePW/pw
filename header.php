@@ -70,7 +70,9 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <?php wp_head(); ?>
+    <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/javascript/html5-shiv.js"></script>
+    <![endif]-->
 
 </head>
 <body <?php body_class(); ?> role="document">
