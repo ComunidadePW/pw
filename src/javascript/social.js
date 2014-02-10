@@ -61,5 +61,3 @@ var Social = {
         }
     }
 };
-
-Social.init();

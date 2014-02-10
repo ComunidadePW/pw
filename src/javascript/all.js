@@ -4,6 +4,7 @@
 
     var $external = document.querySelectorAll('a[rel*="external"]'),
         $pre = document.querySelectorAll('.post-content > pre'),
+        $single = document.querySelectorAll('.single-post'),
         $menu = document.getElementById('anchor-header-sidebar'),
         $headerMenu = document.getElementById('wrap-header-menu'),
         $menuLabel = document.getElementById('header-menu-label'),
@@ -17,7 +18,7 @@
             cb($elements[i]);
         };
     }
-    
+
     function openHeaderAction(e) {
         e.preventDefault();
         var action = this.getAttribute('data-action'),
@@ -31,12 +32,16 @@
         }
     }
 
+    // Share Buttons
+    if($single.length){
+        Social.init();
+    }
+
     $menuLabel.addEventListener('click', openHeaderAction);
     $searchLabel.addEventListener('click', openHeaderAction);
     $searchLabel.addEventListener('click', function () {
         $searchInput.focus();
     });
-
 
     // Sintax Highlight do Google Prettify
     loop($pre, function ($element) {
