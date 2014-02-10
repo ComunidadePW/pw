@@ -178,7 +178,12 @@ function sourcecode ($atts, $content = null) {
       'language' => ''
   ), $atts ));
 
-  return '<pre class="'.$language.'">'.$content.'</pre>';
+  $content = str_replace(Array('&#8220;', '&#8221;'), '"', $content);
+  $content = trim($content, '<p></p><br />');
+  $content = str_replace(array('<code>','</code>','<br />', '<'), array('','','','&lt;'), $content);
+
+  return '<pre class="'.$language.'">'.trim($content).'</pre>';
 }
 add_shortcode('sourcecode', 'sourcecode');
+add_shortcode('source', 'sourcecode');
 ?>
