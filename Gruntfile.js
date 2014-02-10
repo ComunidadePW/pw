@@ -17,12 +17,12 @@ module.exports = function (grunt) {
             with_banner: {
                 options: {
                     banner: '/* \n' +
-                        'Theme Name: pw \n' +
-                        'Theme URI: http://www.pinceladasdaweb.com.br/blog\n' +
-                        'Description: Tema do blog Pinceladas da Web\n' +
+                        'Theme Name: <%= pkg.name %> \n' +
+                        'Theme URI: <%= pkg.homepage %>\n' +
+                        'Description: <%= pkg.title %>\n' +
                         'Author: Comunidade PW \n' +
-                        'Author URI: https://github.com/comunidadepw \n' +
-                        'Version: 0.0.3 \n' +
+                        'Author URI: <%= pkg.repository.url %> \n' +
+                        'Version: <%= pkg.version %> \n' +
                         'Tags: light, two-columns, left-sidebar, fluid-layout, sticky-post \n' +
                         'License: GNU General Public License v2 or later \n' +
                         'License URI: http://www.gnu.org/licenses/gpl-2.0.html \n' +
