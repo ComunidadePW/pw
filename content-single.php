@@ -24,7 +24,7 @@
                 <?php the_post_thumbnail(); ?>
             <?php endif; ?>
         </figure><!-- .post-figure -->
-        
+
         <h1 class="entry-title" role="heading" aria-level="1" itemprop="name"><?php the_title(); ?></h1>
     </header>
     <div class="post-content entry-content space-bottom">
@@ -34,7 +34,7 @@
     </div><!-- .post-content -->
 
     <footer class="post-footer" role="contentinfo">
-        <div class="post-authorbox overflow">
+        <div class="post-authorbox overflow space-bottom">
             <p class="post-footer-title"><b>Escrito por:</b></p>
             <span class="post-authorbox-img fright space-left">
                 <?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_meta('user_email'), '120'); }?>
