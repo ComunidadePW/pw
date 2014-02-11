@@ -29,12 +29,19 @@
     <meta name="author" content="William Bruno" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 
-    <?php if (is_single()) { ?>
-    <meta property="og:url" content="<?php the_permalink() ?>"/>
+    <?php if (is_single()) {
+        $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+    ?>
+    <meta property="og:url" content="<?php the_permalink() ?>" />
     <meta property="og:title" content="<?php single_post_title(''); ?>" />
     <meta property="og:description" content="<?php echo get_excerpt_by_id($post->ID); ?>" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="<?php if (function_exists('catch_that_image')) {echo catch_that_image(); }?>" />
+    <?php if ( $featuredImage ): ?>
+    <meta property="og:image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>" />
+    <?php else: ?>
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/img-post-default.png" />
+    <?php endif; ?>
+
     <?php } else { ?>
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
     <meta property="og:description" content="<?php bloginfo('description'); ?>" />
@@ -43,14 +50,14 @@
     <?php } ?>
 
     <?php if (is_category() || is_tag() || is_month() || is_paged() || is_404()) { ?>
-        <link rel="canonical" href= "<?php echo home_url(); ?>"/>
-        <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href= "<?php echo home_url(); ?>"/>
+    <meta name="robots" content="noindex, follow" />
     <?php } ?>
     <?php if(is_search()) { ?>
-        <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
     <?php }?>
     <?php if ( is_singular() ) { ?>
-        <link rel="canonical" href="<?php the_permalink(); ?>" />
+    <link rel="canonical" href="<?php the_permalink(); ?>" />
     <?php } ?>
 
     <link rel="dns-prefetch" href="//0.gravatar.com" />
