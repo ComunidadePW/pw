@@ -10,7 +10,7 @@ $args = array(
     'tag__in' => $tag_ids,
     'post__not_in' => array($post->ID),
     'posts_per_page'=> 4, // Number of related posts to display.
-    'caller_get_posts'=> 1
+    'ignore_sticky_posts'=> 1
 );
 
 $my_query = new wp_query( $args );
@@ -39,7 +39,7 @@ while( $my_query->have_posts() ) {$my_query->the_post();
     </div><!-- .post-content -->
 </div>
 
-<? }}
+<?php }}
     $post = $orig_post;
     wp_reset_query();
 ?>
