@@ -14,6 +14,5 @@
         <ul class="categories">
             <?php wp_list_categories('sort_column=name&title_li='); ?>
         </ul>
-        <div class="fleft banner-sky"><iframe width="120" scrolling="no" height="600" frameborder="0" marginheight="0" marginwidth="0" src="http://afiliados-01.submarino.com.br/frame.php?franq=AFL-03-42120&amp;tipo=7&amp;banner=1"></iframe></div>
-        <div class="fright banner-sky"><iframe width="120" scrolling="no" height="600" frameborder="0" marginheight="0" marginwidth="0" src="http://afiliados-01.submarino.com.br/frame.php?franq=AFL-03-42120&amp;tipo=7&amp;banner=2"></iframe></div>
+        <div class="banner-sky"><iframe width="120" scrolling="no" height="600" frameborder="0" marginheight="0" marginwidth="0" src="http://afiliados-01.submarino.com.br/frame.php?franq=AFL-03-42120&amp;tipo=7&amp;banner=1"></iframe></div>
     </aside><!-- #sidebar -->
