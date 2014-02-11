@@ -17,6 +17,7 @@
 
             <div id="related" class="fleft column-two-thirds">
                 <p class="related-title"><b>Leia também:</b></p>
+                <?php include (TEMPLATEPATH . '/related-posts.php'); ?>
             </div>
 
             <?php comments_template('', true); ?>

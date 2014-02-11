@@ -238,6 +238,9 @@ a#logo img:hover { background: #0e0e0e; }
     .content-page-buttons a:hover { text-decoration: underline; opacity: 0.9; }
 
 /* Posts Relacionados */
+#related .post:last-child {
+    margin-right: 0
+}
 .related-title {color: #525252; font-size: 16px}
 
 /* Sidebar */
