@@ -17,7 +17,7 @@ get_header(); ?>
         <?php endwhile; ?>
 
         <div class="clear content-page-buttons">
-            <?php posts_nav_link(' ', __('Posts mais antigos', 'pw'), __('Mostrar mais posts', 'pw')); ?>
+            <?php posts_nav_link(' ', __('Posts mais recentes', 'pw'), __('Mostrar mais posts', 'pw')); ?>
         </div><!-- .content-page-buttons -->
 
         <?php else : ?>
