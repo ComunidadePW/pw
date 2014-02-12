@@ -204,6 +204,16 @@ a#logo img:hover { background: #0e0e0e; }
 }
 .post-figure { position: relative; padding-top: 10px }
 
+.post-content ul {
+    margin: 0 0 15px 15px;
+}
+
+.post-content ul li {
+    background: url("images/arrow.gif") no-repeat left 8px;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
 
 .post-date {
     background: #45b3b0; color: #fff;
@@ -299,6 +309,11 @@ a#logo img:hover { background: #0e0e0e; }
 #wpstats { display: none; }
 
 /* obrigatorios */
+.floatL {float:left; margin:0 10px 10px 0}
+.floatR {float:right; margin:0 0 10px 10px}
+.aligncenter {text-align:center; margin:0 0 10px}
+iframe {display: block; margin: 0 auto 15px}
+
 .wp-caption {
     max-width: 100%; /* Keep wide captions from overflowing their container. */
     padding: 4px;
@@ -322,6 +337,24 @@ img.alignright { margin-left: 1em 0 1em 1em; float: right; }
 
 .avatar { float: left; margin-right: 10px; }
 
+table.border { border: 1px solid #000; border-collapse: collapse; }
+table.border td { border: 1px solid #000; padding: 10px; }
+
+.post-content .default {border-collapse: collapse; margin-bottom: 20px; width: 100%}
+.post-content .default thead {color: #000; background-color: #ACC7E1; border-bottom: 1px solid #FFF}
+.post-content .default thead td {border: 1px solid #FFFFFF; font-size: 14px; height: 30px; line-height: 30px; padding-left: 10px; text-align: center}
+.post-content .default thead th {font-weight: normal; font-size: 18px; height: 30px; line-height: 30px; border-left: 1px solid #FFF; height: 40px; text-align: center; font-weight: bold; font-size: 13px}
+.post-content .default tbody { text-align: center; }
+.post-content .default tbody tr {height: 35px; border-bottom: 1px solid #EAEDF0; font-size: 13px; cursor: pointer; color: #444; transition: color 0.3s linear}
+.post-content .default tbody tr:hover { color: #000; }
+.post-content .default tbody tr:hover a { color: #6495C4; }
+.post-content .default tbody tr:nth-child(odd) { background-color: #E3E6EA; }
+.post-content .default tbody td { position: relative; line-height: 34px }
+.post-content .default tbody td.two-lines {line-height: 18px}
+.post-content .default tbody td:nth-child(1) { min-width: 250px; }
+.post-content .default tbody a {color: #46B4B1; position: absolute; left: 40px; transition: color 0.3s linear; text-decoration: none}
+
+
 @media only print {
     a { text-decoration: none; }
     a:after {
@@ -329,10 +362,6 @@ img.alignright { margin-left: 1em 0 1em 1em; float: right; }
         font-size: 0.7em;
     }
 }
-table.border { border: 1px solid #000; border-collapse: collapse; }
-table.border td { border: 1px solid #000; padding: 10px; }
-
-
 
 /**
  * @file forms.css
