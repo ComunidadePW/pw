@@ -11,19 +11,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title><?php if (is_home()) {
-            echo bloginfo('description'); echo ' | ';
-        } elseif (is_404()) {
-            echo '404 Not Found'; echo ' | ';
-        } elseif (is_category()) {
-            wp_title(''); echo ' | ';
-         } elseif (is_search()) {
-            echo 'Search Results'; echo ' | ';
-         } elseif ( is_day() || is_month() || is_year() ) {
-            wp_title(''); echo ' | ';
-         } else {
-            echo wp_title(''); echo ' | ';
-         } bloginfo('name')?></title>
+    <title><?php if(function_exists('optimal_title')) { optimal_title(); }; ?><?php bloginfo('name'); ?> - HTML5 Hard Coding and Bullet Proof CSS</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="author" content="William Bruno" />
