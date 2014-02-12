@@ -216,11 +216,66 @@ function sourcecode ($atts, $content = null) {
   ), $atts ));
 
   $content = str_replace(Array('&#8220;', '&#8221;'), '"', $content);
-  $content = trim($content, '<p></p><br />');
-  $content = str_replace(array('<code>','</code>','<br />', '<'), array('','','','&lt;'), $content);
 
-  return '<pre class="'.$language.'">'.trim($content).'</pre>';
+  return '<pre class="'.$language.'">'.$content.'</pre>';
 }
 add_shortcode('sourcecode', 'sourcecode');
 add_shortcode('source', 'sourcecode');
+
+/**
+ * Don't auto-p wrap shortcodes that stand alone
+ *
+ * Ensures that shortcodes are not wrapped in <<p>>...<</p>>.
+ *
+ * @since 2.9.0
+ *
+ * @param string $pee The content.
+ * @return string The filtered content.
+ */
+function shortcode_unauto( $pee ) {
+    global $shortcode_tags;
+
+    if ( empty( $shortcode_tags ) || !is_array( $shortcode_tags ) ) {
+        return $pee;
+    }
+
+    $tagregexp = join( '|', array_map( 'preg_quote', array_keys( $shortcode_tags ) ) );
+
+    $pattern =
+          '/'
+        . '<p>'                              // Opening paragraph
+        . '\\s*+'                            // Optional leading whitespace
+        . '('                                // 1: The shortcode
+        .     '\\['                          // Opening bracket
+        .     "($tagregexp)"                 // 2: Shortcode name
+        .     '(?![\\w-])'                   // Not followed by word character or hyphen
+                                             // Unroll the loop: Inside the opening shortcode tag
+        .     '[^\\]\\/]*'                   // Not a closing bracket or forward slash
+        .     '(?:'
+        .         '\\/(?!\\])'               // A forward slash not followed by a closing bracket
+        .         '[^\\]\\/]*'               // Not a closing bracket or forward slash
+        .     ')*?'
+        .     '(?:'
+        .         '\\/\\]'                   // Self closing tag and closing bracket
+        .     '|'
+        .         '\\]'                      // Closing bracket
+        .         '(?:'                      // Unroll the loop: Optionally, anything between the opening and closing shortcode tags
+        .             '[^\\[]*+'             // Not an opening bracket
+        .             '(?:'
+        .                 '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
+        .                 '[^\\[]*+'         // Not an opening bracket
+        .             ')*+'
+        .             '\\[\\/\\2\\]'         // Closing shortcode tag
+        .         ')?'
+        .     ')'
+        . ')'
+        . '\\s*+'                            // optional trailing whitespace
+        . '<\\/p>'                           // closing paragraph
+        . '/s';
+
+    return preg_replace( $pattern, '$1', $pee );
+}
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 99);
+add_filter( 'the_content', 'shortcode_unauto',100 );
 ?>
