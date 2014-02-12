@@ -115,6 +115,14 @@ if ( function_exists( 'add_image_size' ) ) {
 }
 
 
+/**
+ * Add a rel="nofollow" to the comment reply links
+ */
+function add_nofollow_to_reply_link( $link ) {
+        return str_replace( '")\'>', '")\' rel=\'nofollow\'>', $link );
+}
+add_filter( 'comment_reply_link', 'add_nofollow_to_reply_link' );
+
 if ( ! function_exists( 'parent_comment' ) ) :
 /**
  * Template for comments and pingbacks.
