@@ -32,9 +32,20 @@ module.exports = function (grunt) {
                     'style.css': ['src/style.css', 'src/prettify.css']
                 }
             }
+        },
+        watch: {
+            css: {
+                files: 'src/*.css',
+                tasks: ['cssmin'],
+                options: {
+                    livereload: true,
+                }   
+            }   
         }
+
     });
  
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
