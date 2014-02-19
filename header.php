@@ -22,7 +22,7 @@
     ?>
     <meta property="og:url" content="<?php the_permalink() ?>" />
     <meta property="og:title" content="<?php single_post_title(''); ?>" />
-    <meta property="og:description" content="<?php echo get_excerpt_by_id($post->ID); ?>" />
+    <meta property="og:description" content="<?php echo wp_trim_words(get_excerpt_by_id($post->ID)); ?>" />
     <meta property="og:type" content="article" />
     <?php if ( $featuredImage ): ?>
     <meta property="og:image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>" />
