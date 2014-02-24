@@ -33,10 +33,4 @@
         <?php the_excerpt(); ?>
 
     </div><!-- .post-content -->
-    <footer class="post-footer" role="contentinfo">
-        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>" class="post-footer-link">
-            &gt;
-        </a>
-        <?php wp_link_pages(); ?>
-    </footer>
 </article><!-- .post -->
