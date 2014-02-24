@@ -111,6 +111,18 @@ pre code { background: transparent; padding: 0; }
     width: 728px
 }
 
+#arroba {
+    position: relative;
+}
+
+#advertising {
+    cursor: pointer;
+    height: 250px;
+    position: absolute;
+    width: 300px;
+    z-index: 5
+}
+
 /* main */
 #main {
     background: #fff;
