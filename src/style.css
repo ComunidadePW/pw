@@ -55,6 +55,15 @@ pre code { background: transparent; padding: 0; }
 .hidden-text { overflow: hidden; text-indent: 100%; white-space: nowrap; }
 .overflow { overflow: hidden; }
 
+.cf:before, .cf:after {
+  content: " ";
+  display: table
+}
+
+.cf:after {
+  clear: both
+}
+
 .white-links a { color: #fff; }
 .white-links a:hover { color: #296e6c; }
 
@@ -93,7 +102,6 @@ pre code { background: transparent; padding: 0; }
 
 .content { margin: 0 auto; }
 
-.post ul { margin-bottom: 30px; }
 .bullet li { list-style: disc; }
 
 /* Advertising */

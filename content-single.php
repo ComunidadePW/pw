@@ -45,9 +45,9 @@
             </div><!-- .post-authorbox-info -->
         </div><!-- .post-authorbox -->
 
-        <div class="post-share overflow">
+        <div class="post-share cf">
             <p class="post-footer-title"><b>Gostou? Compartilhe!</b></p>
-            <ul class="overflow">
+            <ul class="cf">
                 <li class="fleft space-right-small"><div class="g-plusone" data-size="tall" data-href="<?php the_permalink() ?>"></div></li>
                 <li class="fleft space-right-small"><div class="fb-like" data-href="<?php the_permalink() ?>" data-send="false" data-layout="box_count" data-width="140" data-show-faces="false"></div></li>
                 <li class="fleft space-right-small"><script type="IN/Share" data-url="<?php the_permalink() ?>" data-counter="top"></script></li>
