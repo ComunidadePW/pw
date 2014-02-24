@@ -118,7 +118,9 @@ pre code { background: transparent; padding: 0; }
 #advertising {
     cursor: pointer;
     height: 250px;
+    overflow: hidden;
     position: absolute;
+    text-indent: -9000px;
     width: 300px;
     z-index: 5
 }

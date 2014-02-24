@@ -34,7 +34,7 @@ get_header(); ?>
 
             <?php if ($i === 6): ?>
                 <div id="arroba" class="column-third fleft space-bottom-big">
-                    <div id="advertising"></div>
+                    <a id="advertising" href="https://www.eventials.com/?utm_source=pinceladas-da-web&utm_medium=site-link&utm_campaign=animated-banner" title="Eventials - Palestras, Cursos e Eventos On-line" rel="external">Eventials - Palestras, Cursos e Eventos On-line</a>
                     <!--[if !IE]> -->
                     <object type="application/x-shockwave-flash" data="<?php echo get_template_directory_uri(); ?>/src/swf/eventials.swf" width="300" height="250">
                     <!-- <![endif]-->

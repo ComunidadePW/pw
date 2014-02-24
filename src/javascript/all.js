@@ -9,8 +9,7 @@
         $headerMenu = document.getElementById('wrap-header-menu'),
         $menuLabel = document.getElementById('header-menu-label'),
         $searchLabel = document.getElementById('header-search-label'),
-        $searchInput = document.getElementById('header-search-input'),
-        $arroba = document.getElementById('advertising');
+        $searchInput = document.getElementById('header-search-input');
 
     function loop($elements, cb) {
         var i = $elements.length;
@@ -33,16 +32,25 @@
         }
     }
 
+    function externalLinks () {
+        if (!document.getElementsByTagName) return;
+        var anchors = document.getElementsByTagName("a");
+        for (var i=0; i<anchors.length; i++) {
+            var anchor = anchors[i];
+            if (
+                anchor.getAttribute("href") && (
+                anchor.getAttribute("rel") == "external" ||
+                anchor.getAttribute("rel") == "external nofollow" ||
+                anchor.getAttribute("rel") == "nofollow external" )
+                )
+            anchor.target = "_blank";
+        }
+    }
+
     // Share Buttons
     if($single.length){
         Social.init();
     }
-
-    $arroba.addEventListener('click', function () {
-        var href = 'https://www.eventials.com/?utm_source=pinceladas-da-web&utm_medium=site-link&utm_campaign=animated-banner';
-
-        window.open(href, '_blank', '');
-    });
 
     $menuLabel.addEventListener('click', openHeaderAction);
     $searchLabel.addEventListener('click', openHeaderAction);
@@ -56,5 +64,7 @@
         $element.classList.add('linenums');
     });
     prettyPrint();
+
+    externalLinks();
 
 }(document, document, undefined));//function
