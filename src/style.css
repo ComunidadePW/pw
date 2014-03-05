@@ -281,6 +281,7 @@ input, select, textarea {
 
     label span.fleft { display: block; text-align: left; width: 100%; }
     label small { float: left; }
+    #header { height: 190px; }
 
     .searchform input { width: 80%; }
     #footer-logo,
@@ -303,7 +304,6 @@ input, select, textarea {
     .home .post-category { position: static; }
 }
 @media only screen and (max-width: 480px) {
-    #header { height: 190px; }
     #logo { float: left; margin: 20px 0 0 0; }
     .categories li { width: 50%; }
 
