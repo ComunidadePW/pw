@@ -11,7 +11,7 @@
 <article <?php post_class('column-third fleft') ?> id="post-<?php the_ID(); ?>" itemscope itemtype="http://schema.org/Article" role="article">
 
     <header role="banner">
-        <time datetime="<?php echo get_the_time('Y-m-d'); ?>" class="updated fleft post-date"><?php echo get_the_time('d'); ?><br /><span><?php echo get_the_time('F'); ?></span></time>
+        <time datetime="<?php the_time('Y-m-d'); ?>" class="updated fleft post-date"><?php the_time('d'); ?><br /><span><?php the_time('M'); ?></span></time>
         <span class="post-category" itemprop="articleSection"><?php the_category(', ') ?></span>
         <a class="space-bottom-small" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
             <?php if ( !has_post_thumbnail() ): ?>
