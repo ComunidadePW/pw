@@ -30,14 +30,16 @@
         }
     }
 
-    // Assync list thumb images
-    $listThumb = [].slice.call($listThumb);
-    $listThumb.forEach(function($thumb){
-        $thumb.setAttribute('src', $thumb.getAttribute('data-src'));
-        $thumb.removeAttribute('data-src');
-    });  
 
-    
+
+    if (window.matchMedia('(min-width: 660px)').matches) {
+        // Assync list thumb images
+        $listThumb = [].slice.call($listThumb);
+        $listThumb.forEach(function($thumb){
+            $thumb.setAttribute('src', $thumb.getAttribute('data-src'));
+            $thumb.removeAttribute('data-src');
+        });         
+    }
 
 
     // Share Buttons
@@ -63,4 +65,4 @@
         $element.setAttribute('target', '_blank');
     });
 
-}(document, document));//function
+}(window, document));//function
