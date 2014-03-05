@@ -1,29 +1,28 @@
 (function(window, document, undefined) {
-    /*global jQuery: false*/
     'use strict';
+    /*global console: false, Social: false, prettyPrint: false */
 
     var $external = document.querySelectorAll('a[rel*="external"]'),
         $pre = document.querySelectorAll('.post-content > pre'),
         $single = document.querySelectorAll('.single-post'),
-        $menu = document.getElementById('anchor-header-sidebar'),
         $headerMenu = document.getElementById('wrap-header-menu'),
         $menuLabel = document.getElementById('header-menu-label'),
         $searchLabel = document.getElementById('header-search-label'),
-        $searchInput = document.getElementById('header-search-input');
+        $searchInput = document.getElementById('header-search-input'),
+        $listThumb = document.querySelectorAll('.attachment-list-thumb');
 
     function loop($elements, cb) {
         var i = $elements.length;
-
         while (i--) {
             cb($elements[i]);
-        };
+        }
     }
 
     function openHeaderAction(e) {
-        e.preventDefault();
         var action = this.getAttribute('data-action'),
             re = new RegExp('is-opened-' + action, 'g');
 
+        e.preventDefault();
 
         if ($headerMenu.className.match(re) === null) {
             $headerMenu.classList.add('is-opened-' + action);
@@ -32,20 +31,13 @@
         }
     }
 
-    function externalLinks () {
-        if (!document.getElementsByTagName) return;
-        var anchors = document.getElementsByTagName("a");
-        for (var i=0; i<anchors.length; i++) {
-            var anchor = anchors[i];
-            if (
-                anchor.getAttribute("href") && (
-                anchor.getAttribute("rel") == "external" ||
-                anchor.getAttribute("rel") == "external nofollow" ||
-                anchor.getAttribute("rel") == "nofollow external" )
-                )
-            anchor.target = "_blank";
-        }
-    }
+    // Assync list thumb images
+    $listThumb = [].slice.call($listThumb);
+    $listThumb.forEach(function($thumb){
+        $thumb.setAttribute('src', $thumb.getAttribute('data-src'));
+        $thumb.removeAttribute('data-src');
+    });
+
 
     // Share Buttons
     if($single.length){
@@ -65,6 +57,9 @@
     });
     prettyPrint();
 
-    externalLinks();
+    // External links
+    loop($external, function ($element) {
+        $element.setAttribute('target', '_blank');
+    });
 
-}(document, document, undefined));//function
+}(document, document));//function
