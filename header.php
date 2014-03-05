@@ -73,14 +73,6 @@
 <body <?php body_class(); ?> role="document">
 <header id="header" class="column-full content" role="banner">
     <nav id="header-nav" role="navigation">
-        <ul id="header-nav-social" class="fleft">
-            <li class="fleft social-item social-item-1 hidden-text"><a href="http://feeds2.feedburner.com/pinceladasdaweb" title="RSS Pinceladas da Web">rss</a></li>
-            <li class="fleft social-item social-item-2 hidden-text"><a href="https://www.facebook.com/pinceladasdaweb" title="Facebook Pinceladas da Web">facebok</a></li>
-            <li class="fleft social-item social-item-3 hidden-text"><a href="https://twitter.com/pinceladasdaweb" title="Twitter Pinceladas da Web">twitter</a></li>
-            <li class="fleft social-item social-item-4 hidden-text"><a href="https://github.com/pinceladasdaweb" title="Github Pinceladas da Web">github</a></li>
-        </ul><!-- #header-nav-social -->
-
-
         <div id="wrap-header-menu" class="fright">
             <form action="<?php echo home_url(); ?>/" role="search" method="get" id="header-search" class="fleft">
                 <fieldset class="header-search-inputs fleft">
@@ -97,6 +89,13 @@
                 <a href="#wrap-header-menu" data-action="menu" id="header-menu-label" class="fright header-action-label">Menu</a>
             </div><!-- #header-menu -->
         </div><!-- #wrap-header-menu -->
+
+        <ul id="header-nav-social" class="fleft">
+            <li class="fleft social-item social-item-1 hidden-text"><a href="http://feeds2.feedburner.com/pinceladasdaweb" title="RSS Pinceladas da Web">rss</a></li>
+            <li class="fleft social-item social-item-2 hidden-text"><a href="https://www.facebook.com/pinceladasdaweb" title="Facebook Pinceladas da Web">facebok</a></li>
+            <li class="fleft social-item social-item-3 hidden-text"><a href="https://twitter.com/pinceladasdaweb" title="Twitter Pinceladas da Web">twitter</a></li>
+            <li class="fleft social-item social-item-4 hidden-text"><a href="https://github.com/pinceladasdaweb" title="Github Pinceladas da Web">github</a></li>
+        </ul><!-- #header-nav-social -->
 
     </nav><!-- #header-nav -->
     <?php if (is_category() || is_tag() || is_month() || is_paged() || is_page() || is_single() || is_search() || is_404()): ?>

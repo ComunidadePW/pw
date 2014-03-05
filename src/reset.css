@@ -26,7 +26,8 @@ hr {
 }
 p { margin-bottom: 15px; line-height: 1.4em; }
 a { color: #46b4b1; text-decoration: underline; }
-a:hover { color: #296e6c; }
+a:hover,
+a:focus { color: #296e6c; }
 
 cite { font-style: normal; }
 var, code { background: #dedede; font-family: 'Lucida Console', monospace; padding: 4px; line-height: 1.4em; }
