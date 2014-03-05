@@ -1,11 +1,11 @@
 (function(window, document, undefined) {
     'use strict';
-    /*global console: false, Social: false, prettyPrint: false */
+    /*global Social: false, prettyPrint: false */
 
     var $external = document.querySelectorAll('a[rel*="external"]'),
         $pre = document.querySelectorAll('.post-content > pre'),
         $single = document.querySelectorAll('.single-post'),
-        $headerMenu = document.getElementById('wrap-header-menu'),
+        $headerNav = document.getElementById('header-nav'),
         $menuLabel = document.getElementById('header-menu-label'),
         $searchLabel = document.getElementById('header-search-label'),
         $searchInput = document.getElementById('header-search-input'),
@@ -19,15 +19,14 @@
     }
 
     function openHeaderAction(e) {
-        var action = this.getAttribute('data-action'),
-            re = new RegExp('is-opened-' + action, 'g');
+        var re = new RegExp('is-opened-' + this.getAttribute('data-action'), 'g');
 
         e.preventDefault();
 
-        if ($headerMenu.className.match(re) === null) {
-            $headerMenu.classList.add('is-opened-' + action);
+        if ($headerNav.className.match(re) === null) {
+            $headerNav.classList.add('is-opened-' + this.getAttribute('data-action'));
         } else {
-            $headerMenu.classList.remove('is-opened-' + action);
+            $headerNav.classList.remove('is-opened-' + this.getAttribute('data-action'));
         }
     }
 

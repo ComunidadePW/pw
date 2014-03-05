@@ -1,4 +1,3 @@
-
 #header-nav .menu { height: 45px; line-height: 45px; float: left; }
 #header-nav .menu li { float: left; text-transform: uppercase; margin-right: 20px; }
 #header-nav a { text-decoration: none; }
@@ -47,25 +46,54 @@
     border: none; border-radius: 0;
     background: #e7eaf5;
 }
-
+@media only screen and (min-width: 661px) {
+    .social-item {
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+    }
+}
 @media only screen and (max-width: 660px) {
+    body { background-position: center -45px; }
+    #header { height: auto; }
+    #header-nav { height: auto; float: right; }
+    .header-action-label { color: #fff; }
 
-    #wrap-header-menu.is-opened-menu {
+    #header-search-label:before {}
+
+    #header-search-label,
+    #wrap-header-menu,
+    #header-search,
+    #header-nav-social { float: none; }
+
+    #header-nav-social { display: none; border-top: 2px solid #4f9e9a; padding-top: 15px; }
+
+    #header-nav.is-opened-menu {
         background: #6bd2cd;
         border-left: 5px solid #4f9e9a;
-        padding: 0 20px;
-        position: absolute;
+        padding: 0 10px 0 0;
+        width: 180px; min-height: 100%;
+        position: absolute; z-index: 10;
         top: 0; right: 0;
         float: none;
     }
-    #wrap-header-menu.is-opened-menu a { color: #000; }
-    #wrap-header-menu.is-opened-menu .menu { height: auto; float: none; }
+    #header-nav.is-opened-menu a { color: #000; }
+    #header-nav.is-opened-menu .menu a,
+    #header-nav.is-opened-menu .social-item a { display: block; height: 100%; padding-left: 10px; }
+    #header-nav.is-opened-menu a:hover,
+    #header-nav.is-opened-menu a:focus { background: #4f9e9a; }
+    #header-nav.is-opened-menu .menu { height: auto; float: none; }
 
-    #wrap-header-menu.is-opened-menu .menu li,
-    #wrap-header-menu.is-opened-menu #header-menu { float: none; }
+    #header-nav.is-opened-menu .menu li { margin-right: 0; }
 
-    .is-opened-menu #header-menu-label { display: none; }
+    #header-nav.is-opened-menu .menu li,
+    #header-nav.is-opened-menu #header-menu { float: none; }
 
-    .social-item { float: none; background: none; }
+    #header-nav.is-opened-menu #header-menu-label { display: none; }
+    .is-opened-menu #header-nav-social { display: block; }
 
+
+    .social-item { float: none; background: none; text-indent: 0; }
+    .is-opened-menu .social-item { line-height: 45px; }
+    .is-opened-menu .social-item a { width: auto; height: 100%; }
 }

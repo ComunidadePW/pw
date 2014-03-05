@@ -297,11 +297,10 @@ input, select, textarea {
         text-decoration: none;
         display: block;
     }
-
+    .wp-post-image { display: none; }
 }
 @media only screen and (max-width: 620px) {
     .home .post-category { position: static; }
-    .wp-post-image { display: none; }
 }
 @media only screen and (max-width: 480px) {
     .categories li { width: 50%; }

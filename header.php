@@ -91,10 +91,10 @@
         </div><!-- #wrap-header-menu -->
 
         <ul id="header-nav-social" class="fleft">
-            <li class="fleft social-item social-item-1 hidden-text"><a href="http://feeds2.feedburner.com/pinceladasdaweb" title="RSS Pinceladas da Web">rss</a></li>
-            <li class="fleft social-item social-item-2 hidden-text"><a href="https://www.facebook.com/pinceladasdaweb" title="Facebook Pinceladas da Web">facebok</a></li>
-            <li class="fleft social-item social-item-3 hidden-text"><a href="https://twitter.com/pinceladasdaweb" title="Twitter Pinceladas da Web">twitter</a></li>
-            <li class="fleft social-item social-item-4 hidden-text"><a href="https://github.com/pinceladasdaweb" title="Github Pinceladas da Web">github</a></li>
+            <li class="fleft social-item social-item-1 hidden-text"><a href="http://feeds2.feedburner.com/pinceladasdaweb" title="RSS Pinceladas da Web">FeedBurner PW</a></li>
+            <li class="fleft social-item social-item-2 hidden-text"><a href="https://www.facebook.com/pinceladasdaweb" title="Facebook Pinceladas da Web">PW no Facebook</a></li>
+            <li class="fleft social-item social-item-3 hidden-text"><a href="https://twitter.com/pinceladasdaweb" title="Twitter Pinceladas da Web">@pinceladasdaweb</a></li>
+            <li class="fleft social-item social-item-4 hidden-text"><a href="https://github.com/pinceladasdaweb" title="Github Pinceladas da Web">github.com/pinceladasdaweb</a></li>
         </ul><!-- #header-nav-social -->
 
     </nav><!-- #header-nav -->
