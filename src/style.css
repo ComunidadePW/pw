@@ -115,6 +115,8 @@ pre code { background: transparent; padding: 0; }
     position: relative;
 }
 
+#arroba object { margin: 0 auto; display: block; }
+
 #advertising {
     cursor: pointer;
     height: 250px;
@@ -511,8 +513,6 @@ input, select, textarea {
     .home .entry-title { font-size: 1.5em; letter-spacing: 0; margin-bottom: 2px; }
     .home .post-category { display: none; }
     .home .post-date { display: block; }
-
-    .home .post { padding-right: 40px; }
 
     .home .post-footer { position: absolute; right: 10px; top: 15px; }
     .post-footer-link {
