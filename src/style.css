@@ -303,6 +303,8 @@ input, select, textarea {
     .home .post-category { position: static; }
 }
 @media only screen and (max-width: 480px) {
+    #header { height: 190px; }
+    #logo { float: left; margin: 20px 0 0 0; }
     .categories li { width: 50%; }
 
     pre { font-size: 8px; letter-spacing: -1px; }

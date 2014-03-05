@@ -55,11 +55,11 @@
 }
 @media only screen and (max-width: 660px) {
     body { background-position: center -45px; position: relative; }
-    #header { height: auto; }
-    #header-nav { height: auto; float: right; }
+    #header-nav { height: auto; float: right; margin-top: 50px; }
     .header-action-label { color: #fff; }
 
-    #header-search-label:before {}
+    #header-search-label:before { background-position: -271px -2px; }
+    #header-menu-label:before { background-position: -249px top; }
 
     #header-search-label,
     #wrap-header-menu,
@@ -76,6 +76,7 @@
         position: absolute; z-index: 10;
         top: 0; right: 0;
         float: none;
+        margin: 0;
     }
     #header-nav.is-opened-menu a { color: #000; }
     #header-nav.is-opened-menu .menu a,
