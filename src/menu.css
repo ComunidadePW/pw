@@ -1,0 +1,71 @@
+
+#header-nav .menu { height: 45px; line-height: 45px; float: left; }
+#header-nav .menu li { float: left; text-transform: uppercase; margin-right: 20px; }
+#header-nav a { text-decoration: none; }
+#header-nav a:hover { text-decoration: underline; }
+
+.header-action-label {
+    text-transform: uppercase;
+    color: #242324;
+    height: 45px; line-height: 45px;
+    position: relative;
+    padding: 0 13px 0 40px;
+    display: block;
+}
+.header-action-label:before {
+    display: block;
+    position: absolute; left: 10px; top: 5px;
+    width: 20px; height: 27px;
+    content: "";
+    background-image: url("images/sprite-social.png");
+    background-repeat: no-repeat;
+}
+#header-menu-label:before { background-position: -200px top; }
+#header-search-label:before { background-position: -225px -2px; }
+
+
+#header-search { height: 45px; }
+.header-search-inputs,
+#header-menu .menu { display: none; }
+
+.is-opened-menu #header-menu-label { background: #e7e9f5; }
+.is-opened-menu #header-menu .menu { display: block; }
+
+.is-opened-search .header-search-inputs { display: block; }
+
+
+.header-search-label {
+    background-image: url("images/sprite-social.png");
+    background-color: #e7eaf5;
+    background-repeat: no-repeat;
+    background-position: -220px 2px;
+    padding-left: 25px;
+}
+.header-search-label input {
+    height: 45px; line-height: 45px;
+    padding: 0 10px;
+    border: none; border-radius: 0;
+    background: #e7eaf5;
+}
+
+@media only screen and (max-width: 660px) {
+
+    #wrap-header-menu.is-opened-menu {
+        background: #6bd2cd;
+        border-left: 5px solid #4f9e9a;
+        padding: 0 20px;
+        position: absolute;
+        top: 0; right: 0;
+        float: none;
+    }
+    #wrap-header-menu.is-opened-menu a { color: #000; }
+    #wrap-header-menu.is-opened-menu .menu { height: auto; float: none; }
+
+    #wrap-header-menu.is-opened-menu .menu li,
+    #wrap-header-menu.is-opened-menu #header-menu { float: none; }
+
+    .is-opened-menu #header-menu-label { display: none; }
+
+    .social-item { float: none; background: none; }
+
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; border: none; }
+ul { list-style: none; }
+html, body { height: 100%; }
+body,
+input, select, textarea {
+    font: 14px 'Open Sans', Tahoma, sans-serif;
+    color: #020202;
+}
+body {
+    min-width: 240px;
+    background: url("images/bg-body.jpg") repeat-x center top;
+}
+h1, h2, h3, h4, h5, h6 { margin-bottom: 10px; font-weight: normal; letter-spacing: -0.02em; }
+h1 a, h2 a { color: #000; text-decoration: none; }
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 0.9em; font-weight: bold; }
+hr {
+    border: none; border-color: transparent;
+    color: #fff;
+    height: 10px; visibility: hidden;
+}
+p { margin-bottom: 15px; line-height: 1.4em; }
+a { color: #46b4b1; text-decoration: underline; }
+a:hover { color: #296e6c; }
+
+cite { font-style: normal; }
+var, code { background: #dedede; font-family: 'Lucida Console', monospace; padding: 4px; line-height: 1.4em; }
+
+pre { font-size: 0.9em; white-space: pre-wrap; margin-bottom: 15px; }
+pre code { background: transparent; padding: 0; }
+
+*::selection { background: #2B2B2B; color: #E6EAF6; }
+*::-moz-selection { background: #2B2B2B; color: #E6EAF6; }
+
+.white-links a { color: #fff; }
+.white-links a:hover { color: #296e6c; }

@@ -29,7 +29,14 @@ module.exports = function (grunt) {
                         '*/'
                 },
                 files: {
-                    'style.css': ['src/style.css', 'src/prettify.css']
+                    'style.css': [
+                        'src/reset.css', 
+                        'src/grid.css', 
+                        'src/style.css', 
+                        'src/menu.css', 
+                        'src/advertasing.css', 
+                        'src/prettify.css'
+                    ]
                 }
             }
         },
