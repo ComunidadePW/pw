@@ -35,7 +35,9 @@
     $listThumb.forEach(function($thumb){
         $thumb.setAttribute('src', $thumb.getAttribute('data-src'));
         $thumb.removeAttribute('data-src');
-    });
+    });  
+
+    
 
 
     // Share Buttons

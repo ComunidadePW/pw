@@ -1,7 +1,7 @@
 @charset "utf-8";
 * { margin: 0; padding: 0; border: none; }
 ul { list-style: none; }
-html, body { height: 100%; }
+html, body { min-height: 100%; }
 body,
 input, select, textarea {
     font: 14px 'Open Sans', Tahoma, sans-serif;

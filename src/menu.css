@@ -54,7 +54,7 @@
     }
 }
 @media only screen and (max-width: 660px) {
-    body { background-position: center -45px; }
+    body { background-position: center -45px; position: relative; }
     #header { height: auto; }
     #header-nav { height: auto; float: right; }
     .header-action-label { color: #fff; }
@@ -94,6 +94,6 @@
 
 
     .social-item { float: none; background: none; text-indent: 0; }
-    .is-opened-menu .social-item { line-height: 45px; }
+    .is-opened-menu .social-item { line-height: 45px; margin-right: 0; }
     .is-opened-menu .social-item a { width: auto; height: 100%; }
 }
