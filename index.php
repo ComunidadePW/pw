@@ -34,20 +34,7 @@ get_header(); ?>
 
             <?php if ($i === 6): ?>
                 <div id="arroba" class="column-third fleft space-bottom-big">
-                    <a id="advertising" href="https://www.eventials.com/?utm_source=pinceladas-da-web&utm_medium=site-link&utm_campaign=animated-banner" title="Eventials - Palestras, Cursos e Eventos On-line" rel="external">Eventials - Palestras, Cursos e Eventos On-line</a>
-                    <!--[if !IE]> -->
-                    <object type="application/x-shockwave-flash" data="<?php echo get_template_directory_uri(); ?>/src/swf/eventials.swf" width="300" height="250">
-                    <!-- <![endif]-->
-                    <!--[if IE]>
-                    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="300" height="135">
-                    <param name="movie" value="<?php echo get_template_directory_uri(); ?>/src/swf/eventials.swf" />
-                    <!--><!---->
-                    <param name="loop" value="true" />
-                    <param name="menu" value="false" />
-                    <param name="wmode" value="transparent" />
-                    <p>Eventials - Palestras, Cursos e Eventos On-line</p>
-                    </object>
-                    <!-- <![endif]-->
+                    <a id="advertising" href="https://www.eventials.com/?utm_source=pinceladas-da-web&amp;utm_medium=site-link&amp;utm_campaign=animated-banner" title="Eventials - Palestras, Cursos e Eventos On-line" rel="external"><img src="<?php echo get_template_directory_uri(); ?>/src/swf/eventials.jpg" alt="Eventials - Palestras, Cursos e Eventos On-line" title="Eventials - Palestras, Cursos e Eventos On-line"></a>
                 </div>
             <?php endif; ?>
 
