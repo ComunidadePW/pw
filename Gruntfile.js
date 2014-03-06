@@ -30,11 +30,11 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'style.css': [
-                        'src/reset.css', 
-                        'src/grid.css', 
-                        'src/style.css', 
-                        'src/menu.css', 
-                        'src/advertasing.css', 
+                        'src/reset.css',
+                        'src/grid.css',
+                        'src/style.css',
+                        'src/menu.css',
+                        'src/advertising.css',
                         'src/prettify.css'
                     ]
                 }
@@ -46,12 +46,12 @@ module.exports = function (grunt) {
                 tasks: ['cssmin'],
                 options: {
                     livereload: true,
-                }   
-            }   
+                }
+            }
         }
 
     });
- 
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
