@@ -287,10 +287,10 @@ input, select, textarea {
     #footer-logo,
     #logo { margin: 0 auto; }
 
-    .home .post header { margin-bottom: 0; }
-    .home .entry-title { font-size: 1.5em; letter-spacing: 0; margin-bottom: 2px; }
-    .home .post-category { display: none; }
-    .home .post-date { display: block; }
+    .post header { margin-bottom: 0; }
+    .entry-title { font-size: 1.5em; letter-spacing: 0; margin-bottom: 2px; }
+    .post-category { display: none; }
+    .post-date { display: block; }
 
     .home .post-footer { position: absolute; right: 10px; top: 15px; }
     .post-footer-link {

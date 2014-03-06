@@ -28,7 +28,6 @@
                 <?php the_title(); ?>
             </a>
         </h2>
-
     </header>
     <div class="post-content entry-content">
 
