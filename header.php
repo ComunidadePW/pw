@@ -14,7 +14,6 @@
     <title><?php if(function_exists('optimal_title')) { optimal_title(); }; ?><?php bloginfo('name'); ?> - HTML5 Hard Coding and Bullet Proof CSS</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="author" content="William Bruno" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 
     <?php if (is_single()) {
@@ -48,6 +47,10 @@
     <link rel="canonical" href="<?php the_permalink(); ?>" />
     <?php } ?>
 
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri(); ?>/javascript/html5-shiv.js"></script>
+    <![endif]-->
+
     <link rel="dns-prefetch" href="//0.gravatar.com" />
     <link rel="dns-prefetch" href="//img.submarino.com.br" />
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
@@ -65,9 +68,6 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <?php wp_head(); ?>
-    <!--[if lt IE 9]>
-    <script src="<?php echo get_template_directory_uri(); ?>/javascript/html5-shiv.js"></script>
-    <![endif]-->
 
 </head>
 <body <?php body_class(); ?> role="document">
