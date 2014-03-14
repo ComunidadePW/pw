@@ -22,13 +22,8 @@
 
             <?php comments_template('', true); ?>
 
-        <?php endwhile; else: ?>
+        <?php endwhile; endif; ?>
 
-            <article class="not-found">
-                <p><?php _e('Desculpe, nenhum post corresponde aos seus crit&eacute;rios.', 'pw'); ?></p>
-            </article>
-
-        <?php endif; ?>
         <div class="clear"></div>
     </main><!-- #content -->
 

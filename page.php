@@ -19,13 +19,8 @@ get_header(); ?>
 
             <?php get_template_part( 'content', 'page' ); ?>
 
-        <?php endwhile; else: ?>
+        <?php endwhile; endif; ?>
 
-            <article class="not-found">
-                <p><?php _e('Desculpe, nenhum post corresponde aos seus crit&eacute;rios.', 'pw'); ?></p>
-            </article><!-- .not-found -->
-
-        <?php endif; ?>
         <div class="clear"></div>
     </main><!-- #content -->
 

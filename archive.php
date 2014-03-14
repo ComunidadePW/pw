@@ -24,13 +24,7 @@ get_header(); ?>
 
               <?php get_template_part( 'content' ); ?>
 
-        <?php endwhile; else: ?>
-
-            <article class="not-found">
-                <p><?php _e('Desculpe, nenhum post corresponde aos seus crit&eacute;rios.', 'pw'); ?></p>
-            </article>
-
-        <?php endif; ?>
+        <?php endwhile; endif; ?>
 
         <div class="clear content-page-buttons">
             <?php posts_nav_link(' ', __('Posts mais recentes', 'pw'), __('Mostrar mais posts', 'pw')); ?>

@@ -20,16 +20,8 @@ get_header(); ?>
             <?php posts_nav_link(' ', __('Posts mais recentes', 'pw'), __('Mostrar mais posts', 'pw')); ?>
         </div><!-- .content-page-buttons -->
 
-        <?php else : ?>
-            <article class="not-found">
-                <h2 title="Not Found">N&atilde;o Encontrado</h2>
-
-                <section>
-                    <p class="center">Sorry, but you are looking for something that isn't here.</p>
-                    <?php get_template_part('searchform') ; ?>
-                </section>
-            </article><!-- .post -->
         <?php endif; ?>
+
         <div class="clear"></div>
     </main><!-- #content -->
 
