@@ -132,7 +132,7 @@ a#logo img:hover { background: #0e0e0e; }
 .comments-title {color: #525252; font-size: 16px; font-weight: bold}
 .commentlist { margin-bottom: 20px; }
 .comment.even { background: #f9f9f9; }
-    .comment { padding: 10px; list-style: none; }
+    .comment { padding: 10px; list-style: none; word-wrap: break-word; }
 
 .children { margin-left: 25px; }
 
